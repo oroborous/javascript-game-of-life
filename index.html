@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Conway's Game of Life</h1>
+<h2>Generation Count: <span id="genCount">0</span></h2>
+<table>
+</table>
+<h2>Click on some cells to make them "living", then click Start</h2>
+<div id="controls">
+    Grid size: <input type="number" value="10" min="1" max="50" id="dimension"/>
+    <button id="createBoard">Create Board</button>
+    <button id="random">Randomize!</button>
+    <br/>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <br/>
+    Presets:
+    <button id="gliderGun">Gosper Glider Gun</button>
+</div>
+<ul>
+    <li>Any live cell with fewer than two live neighbors dies, as if caused by under population.</li>
+    <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+    <li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+    <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
